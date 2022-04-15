@@ -1,0 +1,21 @@
+<%- include('partials/header.ejs') -%>
+
+<div class="container">
+
+  <h3 class="h3-heading">Create New Post</h3>
+  <!-- Form Create new Post -->
+  <form action="/create" class="new-post" method="post">
+    <div class="title">
+      <label>Title</label>
+      <input type="text" name="postTitle" />
+    </div>
+    <div class="description">
+      <label>Post</label>
+      <textarea name="postDesc" cols="30" rows="10"></textarea>
+    </div>
+    <button class="publish-btn" type="submit">Publish</button>
+  </form>
+
+</div>
+
+<%- include('partials/footer.ejs') -%>

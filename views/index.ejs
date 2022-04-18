@@ -12,17 +12,17 @@
     <div class="all-posts">
 
       <!-- If No Posts Show This Message -->
-      <% if(posts.length <= 0){ %>
+      <% if(postsFounded.length <= 0){ %>
         <p class="no-posts-msg"> No Posts.. </p>
       <% } %>
       
       <!-- Render Posts -->
-      <% posts.forEach(post => { %>
+      <% postsFounded.forEach(post => { %>
       <div class="post">
         <h3 class="h3-heading title"> <%= post.title %> </h3>
         <p class="post-description"> <%= post.desc.substring(0, 60) %>... </p>
         <% if(post.desc.length > 60) { %>
-        <a href="/posts/<%= post.title %>">Read More</a>
+        <a href="/posts/<%=post._id%>" >Read More</a>
         <% } %>
       </div>
       <% }) %>
